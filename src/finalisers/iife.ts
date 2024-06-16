@@ -23,6 +23,7 @@ export default function iife(
 		exports,
 		hasDefaultExport,
 		hasExports,
+		usesTopLevelAwait,
 		indent: t,
 		intro,
 		namedExportsMode,
@@ -91,7 +92,7 @@ export default function iife(
 	magicString.prepend(`${intro}${interopBlock}`);
 
 	let wrapperIntro = `(${getNonArrowFunctionIntro(parameters, {
-		isAsync: false,
+		isAsync: usesTopLevelAwait,
 		name: null
 	})}{${n}${useStrict}${n}`;
 	if (hasExports) {
