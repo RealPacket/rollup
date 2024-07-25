@@ -1,5 +1,65 @@
 # rollup changelog
 
+## 4.19.0
+
+_2024-07-20_
+
+### Features
+
+- Implement support for decorators (#5562)
+
+### Bug Fixes
+
+- Improve soucemap generation when tree-shaking logical expressions (#5581)
+
+### Pull Requests
+
+- [#5562](https://github.com/rollup/rollup/pull/5562): feat: implementing decorator support (@TrickyPi, @lukastaegert)
+- [#5570](https://github.com/rollup/rollup/pull/5570): refactor(finalisers): condition branch (@Simon-He95, @zhangmo8)
+- [#5572](https://github.com/rollup/rollup/pull/5572): Improve chunk and asset type information in docs (@lukastaegert)
+- [#5573](https://github.com/rollup/rollup/pull/5573): Switch to audit resolver to ignore requirejs vulnerability (@lukastaegert)
+- [#5575](https://github.com/rollup/rollup/pull/5575): chore(deps): update dependency inquirer to v10 (@renovate[bot], @lukastaegert)
+- [#5576](https://github.com/rollup/rollup/pull/5576): chore(deps): lock file maintenance minor/patch updates (@renovate[bot], @lukastaegert)
+- [#5580](https://github.com/rollup/rollup/pull/5580): chore(deps): lock file maintenance minor/patch updates (@renovate[bot], @lukastaegert)
+- [#5581](https://github.com/rollup/rollup/pull/5581): When tree-shaking logical expression, make sure to remove all trailing white-space. (@lukastaegert)
+
+## 4.18.1
+
+_2024-07-08_
+
+### Bug Fixes
+
+- Prevent "%" in generated file names to ensure imports resolve (#5535)
+
+### Pull Requests
+
+- [#5524](https://github.com/rollup/rollup/pull/5524): chore(deps): lock file maintenance minor/patch updates (@renovate[bot])
+- [#5525](https://github.com/rollup/rollup/pull/5525): chore(deps): lock file maintenance (@renovate[bot])
+- [#5526](https://github.com/rollup/rollup/pull/5526): chore(deps): lock file maintenance minor/patch updates (@renovate[bot])
+- [#5527](https://github.com/rollup/rollup/pull/5527): chore(deps): lock file maintenance minor/patch updates (@renovate[bot])
+- [#5529](https://github.com/rollup/rollup/pull/5529): Use Spanned trait to simplify logic (@lukastaegert)
+- [#5530](https://github.com/rollup/rollup/pull/5530): Fix typos in ARCHITECTURE.md (@younggglcy)
+- [#5532](https://github.com/rollup/rollup/pull/5532): Use Rust macros for converters where possible (@lukastaegert)
+- [#5535](https://github.com/rollup/rollup/pull/5535): fix: escape `%` if URI malformed (@baseballyama, @lukastaegert)
+- [#5536](https://github.com/rollup/rollup/pull/5536): chore(deps): lock file maintenance minor/patch updates (@renovate[bot], @lukastaegert)
+- [#5541](https://github.com/rollup/rollup/pull/5541): chore(deps): lock file maintenance minor/patch updates (@renovate[bot])
+- [#5542](https://github.com/rollup/rollup/pull/5542): chore(deps): lock file maintenance (@renovate[bot])
+- [#5543](https://github.com/rollup/rollup/pull/5543): Watch rust files and rebuild during dev (@lukastaegert)
+- [#5544](https://github.com/rollup/rollup/pull/5544): Refactor AST converters (@lukastaegert)
+- [#5545](https://github.com/rollup/rollup/pull/5545): chore(deps): update dependency @rollup/plugin-commonjs to v26 (@renovate[bot])
+- [#5546](https://github.com/rollup/rollup/pull/5546): chore(deps): update dependency nyc to v17 (@renovate[bot])
+- [#5547](https://github.com/rollup/rollup/pull/5547): chore(deps): lock file maintenance minor/patch updates (@renovate[bot])
+- [#5548](https://github.com/rollup/rollup/pull/5548): chore(deps): lock file maintenance (@renovate[bot])
+- [#5549](https://github.com/rollup/rollup/pull/5549): chore(deps): lock file maintenance (@renovate[bot])
+- [#5550](https://github.com/rollup/rollup/pull/5550): chore(deps): update dependency eslint-plugin-unicorn to v54 (@renovate[bot], @lukastaegert)
+- [#5551](https://github.com/rollup/rollup/pull/5551): chore(deps): lock file maintenance minor/patch updates (@renovate[bot], @lukastaegert)
+- [#5555](https://github.com/rollup/rollup/pull/5555): chore(deps): lock file maintenance minor/patch updates (@renovate[bot])
+- [#5556](https://github.com/rollup/rollup/pull/5556): chore(deps): lock file maintenance (@renovate[bot])
+- [#5558](https://github.com/rollup/rollup/pull/5558): Consider that the body of ClassBody might be of type StaticBlock (@TrickyPi)
+- [#5565](https://github.com/rollup/rollup/pull/5565): refactor(ast): conditional branch (@Simon-He95)
+- [#5566](https://github.com/rollup/rollup/pull/5566): chore(deps): lock file maintenance minor/patch updates (@renovate[bot])
+- [#5567](https://github.com/rollup/rollup/pull/5567): chore(deps): lock file maintenance (@renovate[bot])
+
 ## 4.18.0
 
 _2024-05-22_

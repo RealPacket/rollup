@@ -33,7 +33,7 @@ pub struct AstConverter<'a> {
 }
 
 impl<'a> AstConverter<'a> {
-  pub fn new(code: &'a str, annotations: &'a Vec<AnnotationWithType>) -> Self {
+  pub fn new(code: &'a str, annotations: &'a [AnnotationWithType]) -> Self {
     Self {
       // This is just a wild guess and should be revisited from time to time
       buffer: Vec::with_capacity(20 * code.len()),
@@ -595,8 +595,8 @@ impl<'a> AstConverter<'a> {
       PropName::Computed(computed_property_name) => {
         self.convert_expression(computed_property_name.expr.as_ref())
       }
-      PropName::Ident(ident) => {
-        self.convert_identifier(ident);
+      PropName::Ident(identifier_name) => {
+        self.convert_identifier_name(identifier_name);
       }
       PropName::Str(string) => {
         self.store_literal_string(string);
@@ -677,7 +677,7 @@ pub fn convert_string(buffer: &mut Vec<u8>, string: &str) {
   buffer.resize(buffer.len() + additional_length, 0);
 }
 
-pub fn update_reference_position(buffer: &mut Vec<u8>, reference_position: usize) {
+pub fn update_reference_position(buffer: &mut [u8], reference_position: usize) {
   let insert_position = (buffer.len() as u32) >> 2;
   buffer[reference_position..reference_position + 4]
     .copy_from_slice(&insert_position.to_ne_bytes());
